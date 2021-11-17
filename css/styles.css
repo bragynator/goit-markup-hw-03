@@ -32,6 +32,12 @@ ul {
 	list-style-type: none;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
 .container {
 	width: 1200px;
 	margin: 0 auto;
@@ -61,7 +67,6 @@ ul {
 
 /* Header */
 .header {
-	width: 1600px;
 	margin: 0 auto;
 
 	border-bottom: 1px solid #ececec;
@@ -125,11 +130,9 @@ ul {
 }
 
 .section {
-	width: 1600px;
 	margin: 0 auto;
 	padding-top: 94px;
 	padding-bottom: 94px;
-	/* max-width: 1600px; */
 }
 
 .section-title {
@@ -145,15 +148,11 @@ ul {
 
 /* Hero */
 
-.hero {
-	width: 1600px;
+.section.hero {
 	margin: 0 auto;
-	background-color: #2f303a;
-}
-
-.hero .container {
 	padding-top: 200px;
 	padding-bottom: 200px;
+	background-color: #2f303a;
 }
 
 .hero-title {
@@ -188,6 +187,7 @@ ul {
 	background-color: var(--accent-button-bg-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
+	border-color: transparent;
 	cursor: pointer;
 }
 
@@ -234,7 +234,7 @@ ul {
 
 /* Team */
 
-.section:last-child {
+.section:nth-child(4) {
 	background-color: #f5f4fa;
 }
 
@@ -243,8 +243,6 @@ ul {
 }
 
 .team-item {
-	min-width: 270px;
-
 	background: #ffffff;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
@@ -254,9 +252,9 @@ ul {
 	margin-right: 30px;
 }
 
-.team-photo {
-	display: block;
-	margin-bottom: 30px;
+.team-post-image {
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .team-title {
@@ -271,8 +269,6 @@ ul {
 }
 
 .team-text {
-	margin-bottom: 30px;
-
 	font-size: 16px;
 	line-height: 1.19;
 	letter-spacing: 0.03em;
@@ -282,7 +278,6 @@ ul {
 /* Footer */
 
 .footer {
-	width: 1600px;
 	margin-right: auto;
 	margin-left: auto;
 	padding-top: 60px;
@@ -321,7 +316,19 @@ a[href="https://goo.gl/maps/Sd4Lendt8BvaJmYn8"]
 
 /* Portfolio */
 
+.filter {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.filter-item:not(:last-child) {
+	margin-right: 8px;
+}
+
 .filter-button {
+	padding: 6px 22px;
+
 	font-family: inherit;
 	font-weight: 500;
 	font-size: 16px;
@@ -329,6 +336,9 @@ a[href="https://goo.gl/maps/Sd4Lendt8BvaJmYn8"]
 	letter-spacing: 0.03em;
 
 	color: var(--title-color);
+	background: #f5f4fa;
+	border-radius: 4px;
+	border-color: transparent;
 	cursor: pointer;
 }
 
@@ -336,9 +346,31 @@ a[href="https://goo.gl/maps/Sd4Lendt8BvaJmYn8"]
 .filter-button:focus {
 	color: #ffffff;
 	background-color: var(--accent-button-bg-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -30px;
+	margin-bottom: -30px;
+}
+
+.portfolio-item {
+	margin-right: 30px;
+	margin-bottom: 30px;
+	flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+.portfolio-post-image {
+	padding: 20px 24px;
+
+	border: 1px solid #eeeeee;
 }
 
 .portfolio-title {
+	margin-bottom: 4px;
+
 	font-size: 18px;
 	line-height: 2;
 	letter-spacing: 0.06em;
