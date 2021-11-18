@@ -67,8 +67,6 @@ img {
 
 /* Header */
 .header {
-	margin: 0 auto;
-
 	border-bottom: 1px solid #ececec;
 }
 
@@ -130,7 +128,6 @@ img {
 }
 
 .section {
-	margin: 0 auto;
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
@@ -148,8 +145,7 @@ img {
 
 /* Hero */
 
-.section.hero {
-	margin: 0 auto;
+.hero {
 	padding-top: 200px;
 	padding-bottom: 200px;
 	background-color: #2f303a;
@@ -224,6 +220,10 @@ img {
 
 /* About */
 
+.about-section {
+	padding-top: 0;
+}
+
 .about {
 	display: flex;
 }
@@ -234,7 +234,7 @@ img {
 
 /* Team */
 
-.section:nth-child(4) {
+.team-section {
 	background-color: #f5f4fa;
 }
 
@@ -278,8 +278,6 @@ img {
 /* Footer */
 
 .footer {
-	margin-right: auto;
-	margin-left: auto;
 	padding-top: 60px;
 	padding-bottom: 60px;
 
@@ -289,9 +287,10 @@ img {
 .footer .logo {
 	display: inline-block;
 	margin-bottom: 20px;
+	margin-right: 0;
 }
 
-.address-item {
+.address-item:not(:last-child) {
 	margin-bottom: 9px;
 }
 
